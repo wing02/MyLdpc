@@ -1,15 +1,15 @@
-#CXXFLAGS =	-O2 -g -Wall -fmessage-length=0   -I /Users/wing/Sdk/eigen
-CXXFLAGS =	-I /Users/wing/Sdk/eigen 
+CXXFLAGS =	-I /Users/wing/Sdk/eigen  -g -O0
 
 OBJS =		MyLdpc.o 
 
-TEST_OBJS = MyTest.o MyLdpc.o 
+TEST_OBJS = Test.o MyLdpc.o 
 
-LIBS = 
+LIBS = -framework OpenCL
 
 TARGET =	MyLdpc
 
 TEST =  MyTest
+
 
 all:	$(TEST)
 
